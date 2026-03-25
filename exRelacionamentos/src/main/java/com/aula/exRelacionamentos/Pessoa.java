@@ -1,13 +1,36 @@
 package com.aula.exRelacionamentos;
 
 public class Pessoa {
-	public Pessoa(String nome, int idade) {
+	
+public Pessoa(String nome, int idade) {
+		
 		super();
 		setNome(nome);
 		setIdade(idade);
+		setCaro(caro);
+		
 	}
+	
+	
+	public Pessoa(String nome, int idade, Carro caro) {
+		
+		super();
+		setNome(nome);
+		setIdade(idade);
+		setCaro(caro);
+		
+	}
+	
 	private String nome;
 	private int idade;
+	private Carro caro;
+	
+	public Carro getCaro() {
+		return caro;
+	}
+	public void setCaro(Carro caro) {
+		this.caro = caro;
+	}
 	public String getNome() {
 		return nome;
 	}
