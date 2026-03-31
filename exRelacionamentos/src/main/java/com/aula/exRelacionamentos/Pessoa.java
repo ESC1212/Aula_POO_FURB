@@ -13,8 +13,6 @@ public Pessoa(String nome, int idade) {
 	
 	
 	public Pessoa(String nome, int idade, Carro caro) {
-		
-		super();
 		setNome(nome);
 		setIdade(idade);
 		setCaro(caro);
