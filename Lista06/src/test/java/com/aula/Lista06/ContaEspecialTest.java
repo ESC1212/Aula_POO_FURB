@@ -24,7 +24,6 @@ class ContaEspecialTest {
 	void testeSaldoEspecialLimiteExedido() {
 		ContaEspecial ce = new ContaEspecial("352375905", 0, 100);
 		ce.depositar(20);
-		IllegalArgumentException ex = new IllegalArgumentException("Valor invalido");
-		assertEquals(ex, ce.sacar(120.01));
+		IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> ce.sacar(120.01), "setNome deveria falhar com nulo");
 	}
 }
