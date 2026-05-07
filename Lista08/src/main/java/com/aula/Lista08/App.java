@@ -8,6 +8,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        MensalidadeEnsino me = new MensalidadeEnsino(7, 300);
+        PrevidenciaPrivada pp = new PrevidenciaPrivada(1000);
+        ContaAgua ca = new ContaAgua(10, 7);
+        Contas c = new Contas();
+        c.incluirConta(me);
+        c.incluirConta(pp);
+        c.incluirConta(ca);
+        System.out.println("Total R$:"+c.calcularTotalContas());
     }
 }

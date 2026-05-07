@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class Contas {
 	
-	private ArrayList<Pagavel> P = new ArrayList<Pagavel>();
+	private ArrayList<Pagavel> contas = new ArrayList<Pagavel>();
 	
 	public void incluirConta(Pagavel conta) {
-		P.add(conta);		
+		contas.add(conta);		
 	}
 	public ArrayList<Pagavel> getContas(){
-		return P;
+		return contas;
 	}
 	public double calcularTotalContas() {
 		double total = 0;
-		for (Pagavel pagavel : P) {
+		for (Pagavel pagavel : contas) {
 			total += pagavel.calcularValorPagar();
 		}
 		return total;
